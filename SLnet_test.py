@@ -55,41 +55,6 @@ def convertToOneHot(vector, num_classes=None):
     result[np.arange(len(vector)), vector] = 1
     return result.astype(int)
 #
-#
-# #
-# def bot_play(i, mainDQN, success):
-#     # See our trained network in action
-#     state, state_pt, _ = env.reset()
-#     reward_sum = 0
-#     done = 0
-#     step_count = 0
-#     while not done:
-#         # env.render()
-#         a = np.argmax(mainDQN.predict(state))
-#         next_state, action, reward, done = env.step(a)
-#         reward_sum += reward
-#         state = next_state
-#         step_count += 1
-#
-#         if 1 == done and reward == 1:
-#             success += 1
-#             #            print("Total score: {}".format(reward_sum))
-#             #            print("episode:{}, steps:{}, reward:{}, success_rate:{}".format(i, step_count, reward, success/10))
-#
-#             break
-#         elif 1 == done and reward < 1:
-#             # print("episode:{}, steps:{}, reward:{}, success_rate:{}".format(i, step_count, reward, success/10))
-#             break
-#         elif step_count > 2000:
-#             # print("episode:{}, steps:{}, reward:{}, success_rate:{}".format(i, step_count, reward, success/10))
-#             break
-#     return step_count, reward, success
-#
-#
-# def _get_distance(box1, box2):
-#     dis = np.sqrt((box1[0] - box2[0]) ** 2 + (box1[1] - box2[1]) ** 2)
-#     return dis
-#
 
 # ======================================================================================================================
 def main():
